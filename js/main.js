@@ -458,8 +458,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile fallback: Ultra-fast 0.11s entrance animations for instant loading
+    // Mobile fallback: Instant document flow, zero white space, ultra-fast 0.11s entrance
     mm.add("(max-width: 1023px)", () => {
+        // Reset pinned deck cards to normal visible flow on mobile
+        gsap.set(["#about-block", "#expertise", "#htb-badges"], {
+            opacity: 1,
+            pointerEvents: "auto",
+            clearProps: "transform"
+        });
+
         gsap.utils.toArray('#left-profile-sidebar, #about, #education, #expertise, #htb-badges, #research-projects-section, #contact').forEach((el) => {
             gsap.from(el, {
                 scrollTrigger: {
