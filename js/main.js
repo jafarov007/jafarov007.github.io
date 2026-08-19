@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
         gestureOrientation: 'vertical',
         smoothWheel: true,
         wheelMultiplier: 1,
-        touchMultiplier: 2,
+        touchMultiplier: 1,
+        smoothTouch: false
     });
 
     function raf(time) {
@@ -458,28 +459,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile fallback: Instant document flow, zero white space, ultra-fast 0.11s entrance
+    // Mobile fallback: Native document flow, 100% instant element visibility, zero white screen
     mm.add("(max-width: 1023px)", () => {
-        // Reset pinned deck cards to normal visible flow on mobile
-        gsap.set(["#about-block", "#expertise", "#htb-badges"], {
+        // Force all elements to be fully visible immediately on mobile
+        gsap.set(["#left-profile-sidebar", "#about-block", "#about", "#education", "#expertise", "#htb-badges", "#research-projects-section", "#contact"], {
             opacity: 1,
             pointerEvents: "auto",
-            clearProps: "transform"
-        });
-
-        gsap.utils.toArray('#left-profile-sidebar, #about, #education, #expertise, #htb-badges, #research-projects-section, #contact').forEach((el) => {
-            gsap.from(el, {
-                scrollTrigger: {
-                    trigger: el,
-                    start: "top 100%",
-                    once: true
-                },
-                y: 4,
-                opacity: 0,
-                duration: 0.11,
-                ease: "power1.out",
-                clearProps: "all"
-            });
+            visibility: "visible",
+            clearProps: "all"
         });
     });
 
