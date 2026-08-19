@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
             edu_msc_school: "Düzce University / Advanced AI Research",
             edu_msc_date: "2024 - 2026",
             edu_msc_desc: "Focusing on Graph Neural Networks, Transformer Architectures (CodeBERT, Gemma), and Multi-Modal AI models for vulnerability identification.",
-            edu_bsc_title: "BSc in Computer Engineering",
-            edu_bsc_school: "Nakhchivan State University / Computer Science Department",
+            edu_bsc_title: "BSc in Information Technology",
+            edu_bsc_school: "Nakhchivan State University / Information Technology Department",
             edu_bsc_date: "2020 - 2024",
             edu_bsc_desc: "Core algorithms, operating systems, embedded hardware development, data structures, and network security protocols.",
 
@@ -206,8 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
             edu_msc_school: "Düzce Üniversitesi / İleri YZ Araştırmaları",
             edu_msc_date: "2024 - 2026",
             edu_msc_desc: "Çizge Sinir Ağları (GNN), Transformer Mimarileri (CodeBERT, Gemma) ve Çok Modlu YZ modelleri üzerine zafiyet analizi araştırmaları.",
-            edu_bsc_title: "Bilgisayar Mühendisliği Lisans (BSc)",
-            edu_bsc_school: "Naxçıvan Dövlət Üniversitesi / Bilgisayar Bilimleri",
+            edu_bsc_title: "İnformasiya Texnologiyaları Lisans (BSc)",
+            edu_bsc_school: "Naxçıvan Dövlət Üniversitesi / İnformasiya Texnologiyaları",
             edu_bsc_date: "2020 - 2024",
             edu_bsc_desc: "Temel algoritmalar, işletim sistemleri, gömülü sistem mimarileri, veri yapıları ve ağ güvenliği protokolleri.",
 
@@ -278,8 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
             edu_msc_school: "Düzce Universiteti / İrəli Sİ Tədqiqatları",
             edu_msc_date: "2024 - 2026",
             edu_msc_desc: "Qraf Neuron Şəbəkələri (GNN), Transformer Mimariləri (CodeBERT, Gemma) üzrə zəiflik analizi.",
-            edu_bsc_title: "Kompüter Mühəndisliyi Bakalavr (BSc)",
-            edu_bsc_school: "Naxçıvan Dövlət Universiteti / Kompüter Elmləri",
+            edu_bsc_title: "İnformasiya Texnologiyaları Bakalavr (BSc)",
+            edu_bsc_school: "Naxçıvan Dövlət Universiteti / İnformasiya Texnologiyaları",
             edu_bsc_date: "2020 - 2024",
             edu_bsc_desc: "Əsas alqoritmlər, əməliyyat sistemləri, daxili sistemlər, məlumat strukturları və şəbəkə təhlükəsizliyi.",
 
