@@ -206,8 +206,8 @@ document.addEventListener('DOMContentLoaded', () => {
             edu_msc_school: "Düzce Üniversitesi / İleri YZ Araştırmaları",
             edu_msc_date: "2024 - 2026",
             edu_msc_desc: "Çizge Sinir Ağları (GNN), Transformer Mimarileri (CodeBERT, Gemma) ve Çok Modlu YZ modelleri üzerine zafiyet analizi araştırmaları.",
-            edu_bsc_title: "İnformasiya Texnologiyaları Lisans (BSc)",
-            edu_bsc_school: "Naxçıvan Dövlət Üniversitesi / İnformasiya Texnologiyaları",
+            edu_bsc_title: "Bilgi Teknolojileri Lisans (BSc)",
+            edu_bsc_school: "Nahçıvan Devlet Üniversitesi / Bilgi Teknolojileri",
             edu_bsc_date: "2020 - 2024",
             edu_bsc_desc: "Temel algoritmalar, işletim sistemleri, gömülü sistem mimarileri, veri yapıları ve ağ güvenliği protokolleri.",
 
