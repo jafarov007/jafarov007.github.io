@@ -1,0 +1,364 @@
+/* Custom CSS for Abdul Jafarov Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --bg-dark: #0b0f17;
+    --bg-card: rgba(18, 24, 38, 0.85);
+    --bg-card-hover: rgba(26, 35, 54, 0.95);
+    --neon-cyan: #00E5FF;
+    --neon-cyan-glow: rgba(0, 229, 255, 0.4);
+    --neon-red: #ff2a5f;
+    --neon-red-glow: rgba(255, 42, 95, 0.4);
+    --neon-green: #10b981;
+    --text-main: #94a3b8;
+    --text-white: #f8fafc;
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-border-cyan: rgba(0, 229, 255, 0.3);
+    --font-heading: 'JetBrains Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+}
+
+body.light-mode {
+    --bg-dark: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.92);
+    --bg-card-hover: rgba(241, 245, 249, 0.98);
+    --neon-cyan: #0284c7;
+    --neon-cyan-glow: rgba(2, 132, 199, 0.3);
+    --neon-red: #dc2626;
+    --neon-red-glow: rgba(220, 38, 38, 0.3);
+    --neon-green: #059669;
+    --text-main: #334155;
+    --text-white: #0f172a;
+    --glass-border: rgba(0, 0, 0, 0.12);
+    --glass-border-cyan: rgba(2, 132, 199, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: initial !important; /* Managed by Lenis */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Header stays dark cyberpunk always */
+header {
+    background-color: rgba(11, 15, 23, 0.85) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.light-mode .text-white {
+    color: #0f172a !important;
+}
+
+body.light-mode .text-slate-300 {
+    color: #334155 !important;
+}
+
+body.light-mode .text-slate-400 {
+    color: #475569 !important;
+}
+
+body.light-mode .glass-panel {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Neural Network Background Canvas */
+#neural-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+/* Typography Utility */
+h1, h2, h3, h4, .font-mono {
+    font-family: var(--font-heading);
+}
+
+.text-gradient-cyan {
+    background: linear-gradient(135deg, #00E5FF 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .text-gradient-cyan {
+    background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-red {
+    background: linear-gradient(135deg, #ff2a5f 0%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Dark Panel */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+    border-color: rgba(0, 229, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(0, 229, 255, 0.15);
+}
+
+/* Glassmorphism Light Panel (User Specified Cards) */
+.glass-panel-light {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-light:hover {
+    border-color: rgba(0, 229, 255, 0.6) !important;
+    box-shadow: 0 10px 30px -5px rgba(0, 229, 255, 0.25) !important;
+}
+
+.glass-panel-light h2,
+.glass-panel-light h3,
+.glass-panel-light h4,
+.glass-panel-light .text-white {
+    color: #0f172a !important;
+}
+
+.glass-panel-light p,
+.glass-panel-light .text-slate-300,
+.glass-panel-light .text-slate-400 {
+    color: #334155 !important;
+}
+
+/* Glowing Avatar Frame */
+.avatar-ring {
+    position: relative;
+    padding: 6px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-red));
+    box-shadow: 0 0 35px var(--neon-cyan-glow);
+    transition: all 0.4s ease;
+}
+
+.avatar-ring:hover {
+    transform: scale(1.03) rotate(2deg);
+    box-shadow: 0 0 50px var(--neon-cyan-glow), 0 0 30px var(--neon-red-glow);
+}
+
+/* Neon Glow Buttons */
+.btn-neon-cyan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px var(--neon-cyan-glow);
+    cursor: pointer;
+}
+
+.btn-neon-cyan:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 30px var(--neon-cyan);
+    transform: translateY(-2px);
+}
+
+.btn-neon-red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: transparent;
+    border: 2px solid var(--neon-red);
+    color: var(--neon-red);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px var(--neon-red-glow);
+    cursor: pointer;
+}
+
+.btn-neon-red:hover {
+    background: var(--neon-red);
+    color: #fff;
+    box-shadow: 0 0 30px var(--neon-red);
+    transform: translateY(-2px);
+}
+
+/* Glitch Effect */
+.glitch-title {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-title::before,
+.glitch-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch-title::before {
+    left: 2px;
+    text-shadow: -2px 0 #00E5FF;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-1 3s infinite linear alternate-reverse;
+}
+
+.glitch-title::after {
+    left: -2px;
+    text-shadow: -2px 0 #ff2a5f;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% { clip: rect(10px, 9999px, 30px, 0); }
+    20% { clip: rect(40px, 9999px, 80px, 0); }
+    40% { clip: rect(15px, 9999px, 50px, 0); }
+    60% { clip: rect(70px, 9999px, 90px, 0); }
+    80% { clip: rect(20px, 9999px, 60px, 0); }
+    100% { clip: rect(50px, 9999px, 100px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip: rect(60px, 9999px, 90px, 0); }
+    25% { clip: rect(20px, 9999px, 40px, 0); }
+    50% { clip: rect(80px, 9999px, 110px, 0); }
+    75% { clip: rect(30px, 9999px, 70px, 0); }
+    100% { clip: rect(10px, 9999px, 50px, 0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 229, 255, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-cyan);
+}
+
+/* Terminal Styling */
+.terminal-window {
+    background: #090d14;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 229, 255, 0.1);
+    font-family: var(--font-heading);
+}
+
+body.light-mode .terminal-window {
+    background: #0f172a;
+    border-color: rgba(2, 132, 199, 0.4);
+}
+
+.terminal-header {
+    background: #111827;
+    padding: 10px 16px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* 3D Container Transform */
+.perspective-1000 {
+    perspective: 1200px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+/* Hero section needs perspective for child 3D transforms */
+#hero {
+    will-change: transform, opacity;
+}
+
+/* Split section children need 3D support */
+#split-section {
+    perspective: 1200px;
+}
+
+#right-content-stream > * {
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+}
+
+/* Research section inner cards need 3D */
+#research-projects-section {
+    perspective: 1500px;
+}
+
+#research-projects-section .glass-panel {
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+/* Smooth transitions for pinned elements */
+.pin-spacer {
+    transition: none !important;
+}

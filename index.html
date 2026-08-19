@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Jafarov | AI & Cyber Security Researcher</title>
+    
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Personal Portfolio of Abdul Jafarov — AI & Cyber Security Researcher, MSc Computer Engineer, Hacker, and Embedded Systems Specialist.">
+    <meta name="keywords" content="Abdul Jafarov, Əbdül Cəfərov, AI, Cyber Security, Vulnerability Detection, Deep Learning, Graphormer, CodeBERT, VuldGemma, Hack The Box, AWS Fortress, Embedded Systems, Raspberry Pi, Arduino, Rust, Metasploit PR 21616">
+    <meta name="author" content="Abdul Jafarov">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/profile.jpg" type="image/jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f17',
+                        cyanNeon: '#00E5FF',
+                        redNeon: '#ff2a5f',
+                        cardDark: 'rgba(18, 24, 38, 0.75)',
+                    },
+                    fontFamily: {
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#0b0f17] text-slate-300 font-sans selection:bg-cyan-500/30 selection:text-cyan-300">
+
+    <!-- Interactive Neural Network Background Canvas -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Floating Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 px-4 py-3 backdrop-blur-md bg-[#0b0f17]/75 border-b border-white/5 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#hero" class="flex items-center gap-2 group text-white font-mono font-bold text-lg tracking-tight">
+                <span class="text-cyan-400 group-hover:text-rose-400 transition-colors">&lt;AJ/&gt;</span>
+                <span class="tracking-wider text-sm hidden sm:inline" data-i18n="hero_name">ABDUL JAFAROV</span>
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wider">
+                <a href="#about" class="hover:text-cyan-400 transition-colors" data-i18n="nav_about">About</a>
+                <a href="#education" class="hover:text-cyan-400 transition-colors" data-i18n="nav_education">Education</a>
+                <a href="#expertise" class="hover:text-cyan-400 transition-colors" data-i18n="nav_expertise">Expertise</a>
+                <a href="#research-projects-section" class="hover:text-cyan-400 transition-colors" data-i18n="nav_research">Research</a>
+                <a href="#htb-badges" class="hover:text-rose-400 transition-colors" data-i18n="nav_htb">HTB Badges</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors" data-i18n="nav_contact">Contact</a>
+            </nav>
+
+            <!-- Language Switcher -->
+            <div class="flex items-center gap-2">
+                <div class="flex items-center bg-black/40 border border-white/10 rounded-full p-1 font-mono text-xs text-white">
+                    <button class="lang-btn px-2.5 py-1 rounded-full transition-all" data-lang="tr">TR</button>
+                    <button class="lang-btn px-2.5 py-1 rounded-full transition-all" data-lang="en">EN</button>
+                    <button class="lang-btn px-2.5 py-1 rounded-full transition-all" data-lang="az">AZ</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="relative z-10 pt-20">
+
+        <!-- ========================================== -->
+        <!-- HERO SECTION (CENTRIC AVATAR & TYPING BIO) -->
+        <!-- ========================================== -->
+        <section id="hero" class="min-h-[92vh] flex flex-col items-center justify-center text-center px-4 py-16 max-w-5xl mx-auto">
+            
+            <!-- Avatar Frame with Glow -->
+            <div class="mb-8 avatar-ring cursor-pointer">
+                <img src="assets/profile.jpg" alt="Abdul Jafarov" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-[#0b0f17]" onerror="this.src='https://ui-avatars.com/api/?name=Abdul+Jafarov&background=00E5FF&color=000&size=200'">
+            </div>
+
+            <!-- Top Pill Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs font-semibold mb-4 tracking-wider uppercase">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                <span data-i18n="hero_badge">AI & CYBERSECURITY RESEARCHER</span>
+            </div>
+
+            <!-- Name with Glitch Effect -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white font-mono tracking-tight mb-4 glitch-title" data-text="ABDUL JAFAROV" data-i18n="hero_name">
+                ABDUL JAFAROV
+            </h1>
+
+            <!-- Dynamic Typewriter Subtitle -->
+            <div class="text-lg md:text-2xl font-mono text-cyan-400 mb-6 h-8 flex items-center justify-center gap-1">
+                <span class="text-rose-400">&gt;</span>
+                <span id="typing-text"></span>
+                <span class="animate-pulse text-cyan-400">_</span>
+            </div>
+
+            <!-- Short Bio Sentence under profile photo -->
+            <p class="max-w-2xl text-slate-300 text-base md:text-lg mb-8 leading-relaxed font-light" data-i18n="hero_bio_short">
+                Araştırmaya, üretmeye ve öğrenmeye devam eden bir siber güvenlik araştırmacısı & hacker.
+            </p>
+
+            <!-- Social Links / Badges Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-10 text-xs font-mono">
+                <!-- HTB Profile Badge -->
+                <a href="https://profile.hackthebox.com/profile/019d212c-c348-7008-9069-35beb7cd9b38?utm_medium=copy_url" target="_blank" class="px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-cube"></i> HTB Profile
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/jafarov007" target="_blank" class="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 hover:bg-white/10 transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://tr.linkedin.com/in/abdul-jafarov-4123b537a" target="_blank" class="px-4 py-2 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500/20 transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#research-projects-section" class="btn-neon-cyan">
+                    <i class="fa-solid fa-flask"></i> <span data-i18n="btn_projects">Explore Research</span>
+                </a>
+                <a href="#contact" class="btn-neon-red">
+                    <i class="fa-solid fa-terminal"></i> <span data-i18n="btn_contact">Contact</span>
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="mt-16 animate-bounce text-slate-500 text-xs font-mono flex flex-col items-center gap-1">
+                <span>SCROLL DOWN</span>
+                <i class="fa-solid fa-chevron-down text-cyan-400"></i>
+            </div>
+        </section>
+
+
+        <!-- ========================================================= -->
+        <!-- PHASE 1: PINNED PROFILE LEFT + RIGHT CONTENT STREAM SCROLL -->
+        <!-- ========================================================= -->
+        <section id="split-section" class="max-w-7xl mx-auto px-4 pt-12 pb-4 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- LEFT COLUMN: PINNED PROFILE SIDEBAR -->
+                <div id="left-profile-sidebar" class="lg:col-span-4 w-full">
+                    <div class="glass-panel-light p-6 sticky top-24 space-y-6">
+                        <!-- Profile Card Header -->
+                        <div class="text-center">
+                            <div class="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-2 border-cyan-400/50 p-1 shadow-lg shadow-cyan-500/20">
+                                <img src="assets/profile.jpg" alt="Abdul Jafarov" class="w-full h-full object-cover rounded-full" onerror="this.src='https://ui-avatars.com/api/?name=Abdul+Jafarov&background=00E5FF&color=000&size=200'">
+                            </div>
+                            <h2 class="text-xl font-bold font-mono text-slate-900" data-i18n="hero_name">ABDUL JAFAROV</h2>
+                            <p class="text-xs text-cyan-600 font-mono mt-1 font-semibold">AI & Cyber Security Researcher</p>
+                        </div>
+
+                        <hr class="border-slate-200">
+
+                        <!-- Bio Paragraph -->
+                        <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="side_bio">
+                            AI & Cybersecurity Researcher | Hacker & Embedded Systems Enthusiast. Continuous learner, researcher, and builder.
+                        </p>
+
+                        <!-- Publications / Research Highlight Box -->
+                        <div class="p-3.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
+                            <div class="flex items-center gap-2.5 mb-2">
+                                <i class="fa-solid fa-book-open text-cyan-600 text-base"></i>
+                                <span class="font-mono text-xs font-bold text-cyan-800" data-i18n="side_htb_title">Araştırmalar & Açık Kaynak</span>
+                            </div>
+                            <p class="text-[11px] text-slate-700 font-mono leading-relaxed" data-i18n="side_htb_rarity">
+                                2 akademik yayın (GNN modelleri) · zafiyet tespiti ve açık kaynak projeler
+                            </p>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="space-y-2 font-mono text-xs">
+                            <div class="text-[10px] text-slate-500 uppercase tracking-widest font-bold" data-i18n="side_quick_stats">QUICK STATS</div>
+                            <div class="flex items-center justify-between text-slate-700">
+                                <span>Degree:</span>
+                                <span class="text-cyan-700 font-bold" data-i18n="stat_degree">MSc Computer Eng.</span>
+                            </div>
+                            <div class="flex items-center justify-between text-slate-700">
+                                <span>Focus:</span>
+                                <span class="text-rose-700 font-bold" data-i18n="stat_specialty">Explainable AI & Sec</span>
+                            </div>
+                            <div class="flex items-center justify-between text-slate-700">
+                                <span>Languages:</span>
+                                <span class="text-emerald-700 font-bold">C/C++, Rust, Python, JS, PHP</span>
+                            </div>
+                        </div>
+
+                        <!-- Social Action Links -->
+                        <div class="pt-2 flex items-center justify-around text-slate-600 text-lg">
+                            <a href="https://github.com/jafarov007" target="_blank" class="hover:text-cyan-600 transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://tr.linkedin.com/in/abdul-jafarov-4123b537a" target="_blank" class="hover:text-cyan-600 transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://profile.hackthebox.com/profile/019d212c-c348-7008-9069-35beb7cd9b38" target="_blank" class="hover:text-emerald-600 transition-colors" title="Hack The Box"><i class="fa-solid fa-cube"></i></a>
+                            <a href="mailto:jafarovabdul012@gmail.com" class="hover:text-rose-600 transition-colors" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: DETAILED CONTENT STREAM DECK -->
+                <div id="right-content-stream" class="lg:col-span-8 relative" style="min-height: 680px;">
+                    <!-- ABOUT + EDUCATION (combined first slot) -->
+                    <div id="about-block" class="w-full lg:absolute lg:top-0 lg:left-0 lg:right-0 space-y-4">
+
+                        <!-- ABOUT ME CARD -->
+                        <div id="about" class="glass-panel-light p-8">
+                            <h2 class="text-2xl font-bold font-mono text-cyan-600 mb-4 flex items-center gap-2" data-i18n="sec_about_title">
+                                &lt; About Me /&gt;
+                            </h2>
+                            <p class="text-slate-700 leading-relaxed font-normal text-sm md:text-base mb-6" data-i18n="sec_about_desc">
+                                Passionate AI and Cybersecurity Engineer focused on developing explainable deep learning models for software vulnerability detection, automated exploit analysis, and hardware security. Blending academic research with hands-on offensive security.
+                            </p>
+                            <!-- Core Pillars Badges -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center font-mono text-xs">
+                                <div class="p-3 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-800 font-bold">
+                                    <i class="fa-solid fa-brain text-lg block mb-1 text-cyan-600"></i>AI & GNNs
+                                </div>
+                                <div class="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-800 font-bold">
+                                    <i class="fa-solid fa-user-ninja text-lg block mb-1 text-rose-600"></i>Cyber Security
+                                </div>
+                                <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 font-bold">
+                                    <i class="fa-solid fa-microchip text-lg block mb-1 text-emerald-600"></i>Embedded & Rust
+                                </div>
+                                <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-800 font-bold">
+                                    <i class="fa-brands fa-python text-lg block mb-1 text-amber-600"></i>Python Tooling
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EDUCATION CARD (directly below About) -->
+                        <div id="education" class="glass-panel-light p-8">
+                            <h2 class="text-2xl font-bold font-mono text-rose-600 mb-6 flex items-center gap-2" data-i18n="sec_edu_title">
+                                &lt; Education /&gt;
+                            </h2>
+                            <div class="relative border-l-2 border-rose-500/40 ml-3 space-y-8">
+                                <div class="relative pl-6 group">
+                                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-rose-500 shadow-lg shadow-rose-500/50 group-hover:scale-125 transition-transform"></div>
+                                    <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                                        <h3 class="text-lg font-bold text-slate-900 font-mono" data-i18n="edu_msc_title">MSc in Computer Engineering</h3>
+                                        <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-rose-500/15 text-rose-800 font-bold border border-rose-500/30" data-i18n="edu_msc_date">2024 - 2026</span>
+                                    </div>
+                                    <div class="text-xs font-mono text-cyan-700 font-semibold mb-2" data-i18n="edu_msc_school">Istanbul Technical University / Advanced AI Research</div>
+                                    <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="edu_msc_desc">
+                                        Focusing on Graph Neural Networks, Transformer Architectures (CodeBERT, Gemma), and Multi-Modal AI models for vulnerability identification.
+                                    </p>
+                                </div>
+                                <div class="relative pl-6 group">
+                                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-500 shadow-lg shadow-cyan-500/50 group-hover:scale-125 transition-transform"></div>
+                                    <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                                        <h3 class="text-lg font-bold text-slate-900 font-mono" data-i18n="edu_bsc_title">BSc in Computer Engineering</h3>
+                                        <span class="text-xs font-mono px-2.5 py-0.5 rounded bg-cyan-500/15 text-cyan-800 font-bold border border-cyan-500/30" data-i18n="edu_bsc_date">2020 - 2024</span>
+                                    </div>
+                                    <div class="text-xs font-mono text-cyan-700 font-semibold mb-2" data-i18n="edu_bsc_school">Baku State University / Computer Science Department</div>
+                                    <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="edu_bsc_desc">
+                                        Core algorithms, operating systems, embedded hardware development, data structures, and network security protocols.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- end #about-block -->
+
+                    <!-- EXPERTISE & TECHNOLOGIES -->
+                    <div id="expertise" class="w-full lg:absolute lg:top-0 lg:left-0 lg:right-0">
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-2xl font-bold font-mono text-emerald-600 flex items-center gap-2" data-i18n="sec_exp_title">
+                                &lt; Expertise & Tech Stack /&gt;
+                            </h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Card 1: AI & Deep Learning -->
+                            <div class="glass-panel-light p-6 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-3 rounded-lg bg-cyan-500/20 text-cyan-700 text-xl font-bold">
+                                        <i class="fa-solid fa-brain"></i>
+                                    </div>
+                                    <h3 class="font-mono text-base font-bold text-slate-900" data-i18n="exp_ai_title">AI & Deep Learning</h3>
+                                </div>
+                                <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="exp_ai_desc">
+                                    Graphormer, GNNs, PyTorch, explainable AI (XAI) models for source code vulnerability discovery.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">PyTorch</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">GNNs</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">Transformers</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Cyber Security -->
+                            <div class="glass-panel-light p-6 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-3 rounded-lg bg-rose-500/20 text-rose-700 text-xl font-bold">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <h3 class="font-mono text-base font-bold text-slate-900" data-i18n="exp_sec_title">Cyber Security & Ethical Hacking</h3>
+                                </div>
+                                <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="exp_sec_desc">
+                                    Penetration testing, Metasploit module development, web security, SSRF/RCE exploit engineering.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">Metasploit</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">HTB</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">Burp Suite</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Embedded Systems -->
+                            <div class="glass-panel-light p-6 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-3 rounded-lg bg-emerald-500/20 text-emerald-700 text-xl font-bold">
+                                        <i class="fa-solid fa-microchip"></i>
+                                    </div>
+                                    <h3 class="font-mono text-base font-bold text-slate-900" data-i18n="exp_emb_title">Embedded Systems & Hardware</h3>
+                                </div>
+                                <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="exp_emb_desc">
+                                    C/C++, Rust, microcontrollers, low-level memory security, and firmware reverse engineering.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">C/C++</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">Rust</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">ARM</span>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Python & Automation -->
+                            <div class="glass-panel-light p-6 space-y-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-3 rounded-lg bg-amber-500/20 text-amber-700 text-xl font-bold">
+                                        <i class="fa-brands fa-python"></i>
+                                    </div>
+                                    <h3 class="font-mono text-base font-bold text-slate-900" data-i18n="exp_py_title">Python & System Automation</h3>
+                                </div>
+                                <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="exp_py_desc">
+                                    Automated security scanners, lab scenario development, custom CLI tools, data analysis scripts.
+                                </p>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">Python 3</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">Bash</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-900 text-[10px] font-mono font-semibold">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACHIEVEMENTS & CERTIFICATIONS SECTION -->
+                    <div id="htb-badges" class="glass-panel-light p-6 md:p-8 w-full lg:absolute lg:top-0 lg:left-0 lg:right-0 border border-amber-500/40 space-y-4">
+                        <div class="flex flex-wrap items-center justify-between gap-4 mb-2">
+                            <h2 class="text-2xl font-bold font-mono text-amber-600 flex items-center gap-2" data-i18n="sec_achieve_title">
+                                &lt; Achievements & Certifications /&gt;
+                            </h2>
+                            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-900 border border-amber-500/50 text-xs font-mono font-bold">Top Global Honor & Rank</span>
+                        </div>
+
+                        <!-- Card 1: HTB AWS Fortress -->
+                        <div class="flex flex-col sm:flex-row items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-amber-500/10 via-rose-500/10 to-cyan-500/10 border border-amber-500/30">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 flex items-center justify-center rounded-xl bg-amber-500/20 border border-amber-400/40 shadow-lg shadow-amber-500/20">
+                                <i class="fa-brands fa-aws text-4xl text-amber-600 animate-pulse"></i>
+                            </div>
+                            <div class="space-y-1 text-center sm:text-left flex-1">
+                                <div class="text-[10px] font-mono text-amber-700 font-bold uppercase tracking-widest">HACK THE BOX BADGE • EARNED 04 APR 2026</div>
+                                <h3 class="text-base font-bold text-slate-900 font-mono" data-i18n="htb_aws_title">Respected by AWS — AWS Fortress</h3>
+                                <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="htb_aws_desc">
+                                    Completed the AWS Fortress challenge on Hack The Box. Placed among the top 0.04% of global users.
+                                </p>
+                                <div class="pt-1 flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                                    <a href="https://labs.hackthebox.com/achievement/badge/3304698/163" target="_blank" class="px-3 py-1 rounded bg-amber-500 text-black font-mono font-bold text-[11px] hover:bg-amber-400 transition-colors flex items-center gap-1.5">
+                                        <i class="fa-solid fa-award"></i> <span data-i18n="htb_view_badge">Verify HTB</span>
+                                    </a>
+                                    <a href="https://profile.hackthebox.com/profile/019d212c-c348-7008-9069-35beb7cd9b38?utm_medium=copy_url" target="_blank" class="px-3 py-1 rounded bg-slate-900 border border-slate-700 text-slate-100 font-mono text-[11px] hover:border-amber-400/50 transition-colors flex items-center gap-1.5">
+                                        <i class="fa-solid fa-cube text-emerald-400"></i> <span data-i18n="htb_view_profile">HTB Profile</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: ICPC Northern Eurasia Finals -->
+                        <div class="flex flex-col sm:flex-row items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-sky-500/10 via-cyan-500/10 to-indigo-500/10 border border-sky-500/30">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 flex items-center justify-center rounded-xl bg-sky-500/20 border border-sky-400/40 shadow-lg shadow-sky-500/20">
+                                <i class="fa-solid fa-trophy text-3xl text-sky-600"></i>
+                            </div>
+                            <div class="space-y-1 text-center sm:text-left flex-1">
+                                <div class="text-[10px] font-mono text-sky-700 font-bold uppercase tracking-widest">COMPETITIVE PROGRAMMING • 13 DEC 2020</div>
+                                <h3 class="text-base font-bold text-slate-900 font-mono" data-i18n="icpc_title">ICPC Northern Eurasia Finals — Honorable Mention</h3>
+                                <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="icpc_desc">
+                                    ICPC Kuzey Avrasya Bölge Finallerinde (NERC 2020) karmaşık algoritma ve veri yapıları problemlerini çözerek Onur Derecesi (Honorable Mention) kazandı.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================================= -->
+        <!-- PHASE 2: 3D ROTATE & SLIDE SECTION (RESEARCH & PUBLICATIONS) -->
+        <!-- ========================================================= -->
+        <section id="research-projects-section" class="max-w-7xl mx-auto px-4 pt-6 pb-16 perspective-1000">
+            <div class="glass-panel p-8 md:p-12 space-y-10 border-cyan-500/40 shadow-2xl shadow-cyan-500/10">
+                
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto space-y-3">
+                    <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-mono text-xs">ACADEMIC & OPEN SOURCE</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white font-mono" data-i18n="sec_pub_title">
+                        &lt; Research & Publications /&gt;
+                    </h2>
+                    <p class="text-xs md:text-sm text-slate-400 font-mono">
+                        Pioneering deep learning approaches for explainable vulnerability identification and exploit module development.
+                    </p>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Paper 1: Graphormer & CodeBERT Hybrid (Conference) -->
+                    <div class="glass-panel-light p-6 space-y-4 hover:border-cyan-400 transition-all flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 rounded bg-cyan-500/20 text-cyan-800 font-mono text-[10px] font-bold tracking-wider" data-i18n="pub_badge_conf">INTERNATIONAL CONFERENCE</span>
+                                <i class="fa-solid fa-scroll text-cyan-600 text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 font-mono leading-snug" data-i18n="pub_conf_title">
+                                Graphormer and CodeBERT-Based Hybrid Vulnerability Detection
+                            </h3>
+                            <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="pub_conf_desc">
+                                Novel hybrid model leveraging Graphormer structure-aware embeddings and CodeBERT token semantics to detect deep security flaws in source code.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600">
+                            <span><i class="fa-solid fa-code-commit text-cyan-600"></i> Hybrid GNN+NLP</span>
+                            <span class="text-cyan-700 font-bold">Peer Reviewed</span>
+                        </div>
+                    </div>
+
+                    <!-- Paper 2: VuldGemma (Journal / Paper) -->
+                    <div class="glass-panel-light p-6 space-y-4 hover:border-rose-400 transition-all flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 rounded bg-rose-500/20 text-rose-800 font-mono text-[10px] font-bold tracking-wider" data-i18n="pub_badge_journal">RESEARCH PAPER</span>
+                                <i class="fa-solid fa-book-bookmark text-rose-600 text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 font-mono leading-snug" data-i18n="pub_journal_title">
+                                VuldGemma: An Explainable Multi-Modal Approach for Software Vulnerability Detection
+                            </h3>
+                            <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="pub_journal_desc">
+                                Multi-modal explainable LLM/GNN framework providing precise attention heatmaps and evidence graphs for vulnerability predictions.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600">
+                            <span><i class="fa-solid fa-eye text-rose-600"></i> Explainable AI (XAI)</span>
+                            <span class="text-rose-700 font-bold">Multi-Modal</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Flowise RCE Metasploit Module with PR #21616 Link -->
+                    <div class="glass-panel-light p-6 space-y-4 hover:border-emerald-400 transition-all flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-800 font-mono text-[10px] font-bold tracking-wider" data-i18n="proj_badge_metasploit">METASPLOIT MODULE • PR #21616</span>
+                                <i class="fa-solid fa-terminal text-emerald-600 text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 font-mono leading-snug" data-i18n="proj_flowise_title">
+                                Flowise RCE Module & Session Security (Metasploit PR #21616)
+                            </h3>
+                            <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="proj_flowise_desc">
+                                Official Metasploit Framework exploit module (Pull Request #21616) targeting authenticated RCE and session security bypass vectors.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono">
+                            <a href="https://github.com/rapid7/metasploit-framework/pull/21616" target="_blank" class="text-emerald-700 font-bold hover:underline flex items-center gap-1.5">
+                                <i class="fa-brands fa-github text-emerald-700"></i> View Metasploit PR #21616 <i class="fa-solid fa-external-link-alt text-[10px]"></i>
+                            </a>
+                            <span class="text-slate-600 font-semibold">Exploit Module</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: JafarovSecLab -->
+                    <div class="glass-panel-light p-6 space-y-4 hover:border-amber-400 transition-all flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="px-2.5 py-1 rounded bg-amber-500/20 text-amber-900 font-mono text-[10px] font-bold tracking-wider" data-i18n="proj_badge_lab">CYBER SECURITY LAB</span>
+                                <i class="fa-solid fa-vial text-amber-600 text-lg"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 font-mono leading-snug" data-i18n="proj_lab_title">
+                                JafarovSecLab — İnteraktif Zafiyet Laboratuvarı
+                            </h3>
+                            <p class="text-xs text-slate-700 leading-relaxed font-normal" data-i18n="proj_lab_desc">
+                                XSS, IDOR, SSRF, SSTI ve diğer web zafiyet senaryolarını içeren çok modüllü güvenlik laboratuvarı.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600">
+                            <span><i class="fa-solid fa-flask text-amber-600"></i> Multi-Scenario Lab</span>
+                            <span class="text-amber-700 font-bold">SecLab Suite</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================================= -->
+        <!-- INTERACTIVE HACKER TERMINAL & CONTACT CENTER SECTION -->
+        <!-- ========================================================= -->
+        <section id="contact" class="max-w-5xl mx-auto px-4 py-20 gsap-reveal space-y-8">
+            
+            <h2 class="text-3xl font-extrabold text-center font-mono text-cyan-400" data-i18n="sec_contact_title">
+                &lt; Interactive Terminal & Contact /&gt;
+            </h2>
+
+            <!-- Terminal Window (Full Width & Responsive) -->
+            <div class="terminal-window flex flex-col">
+                <div class="terminal-header">
+                    <div class="flex items-center gap-2">
+                        <span class="terminal-dot bg-rose-500"></span>
+                        <span class="terminal-dot bg-amber-500"></span>
+                        <span class="terminal-dot bg-emerald-500"></span>
+                        <span class="ml-2 text-xs text-slate-400 font-mono">jafarov007@sec-lab:~</span>
+                    </div>
+                    <span class="text-[10px] text-cyan-400/80 font-mono">bash 5.2</span>
+                </div>
+
+                <!-- Output Screen -->
+                <div id="terminal-output" class="p-5 flex-1 min-h-[220px] max-h-[320px] overflow-y-auto font-mono text-xs text-slate-300 space-y-2">
+                    <div class="text-cyan-400" data-i18n="term_welcome">Type 'help' or 'contact' to interact with JafarovSecLab Terminal CLI.</div>
+                    <div class="text-slate-500 text-[11px]" data-i18n="term_prompt_hint">Commands: help | skills | htb | publications | contact | clear</div>
+                </div>
+
+                <!-- Input Form -->
+                <form id="terminal-form" class="p-3 bg-black/60 border-t border-white/10 flex items-center gap-2 font-mono text-xs">
+                    <span class="text-rose-400 font-bold flex-shrink-0">jafarov007@sec-lab:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" placeholder="type a command (e.g. help, skills, htb, contact)..." class="flex-1 bg-transparent text-cyan-300 outline-none">
+                    <button type="submit" class="px-3 py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[11px] hover:bg-cyan-500/40 transition-colors">
+                        Exec ⏎
+                    </button>
+                </form>
+            </div>
+
+            <!-- Direct Contact & Social Links Bar -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+                <!-- Email Card -->
+                <div class="glass-panel p-5 text-center space-y-2">
+                    <i class="fa-solid fa-envelope text-2xl text-rose-400"></i>
+                    <div class="text-white font-bold">Email Address</div>
+                    <a href="mailto:jafarovabdul012@gmail.com" class="text-cyan-400 hover:underline block truncate">jafarovabdul012@gmail.com</a>
+                </div>
+
+                <!-- GitHub Card -->
+                <div class="glass-panel p-5 text-center space-y-2">
+                    <i class="fa-brands fa-github text-2xl text-slate-200"></i>
+                    <div class="text-white font-bold">GitHub Repository</div>
+                    <a href="https://github.com/jafarov007" target="_blank" class="text-cyan-400 hover:underline block truncate">github.com/jafarov007</a>
+                </div>
+
+                <!-- LinkedIn Card -->
+                <div class="glass-panel p-5 text-center space-y-2">
+                    <i class="fa-brands fa-linkedin text-2xl text-sky-400"></i>
+                    <div class="text-white font-bold">LinkedIn Profile</div>
+                    <a href="https://tr.linkedin.com/in/abdul-jafarov-4123b537a" target="_blank" class="text-cyan-400 hover:underline block truncate">linkedin.com/in/abdul-jafarov</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-white/10 py-10 text-center font-mono text-xs text-slate-500">
+            <p data-i18n="footer_copy">© 2026 Abdul Jafarov. Engineered for GitHub Pages.</p>
+        </footer>
+
+    </main>
+
+    <!-- Lenis Smooth Scroll CDN JS -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- GSAP & ScrollTrigger CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Main JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
