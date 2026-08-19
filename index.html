@@ -553,10 +553,13 @@
                 </div>
 
                 <!-- Input Form -->
-                <form id="terminal-form" class="p-3 bg-black/60 border-t border-white/10 flex items-center gap-2 font-mono text-xs">
-                    <span class="text-rose-400 font-bold flex-shrink-0">jafarov007@sec-lab:~$</span>
-                    <input type="text" id="terminal-input" autocomplete="off" placeholder="type a command (e.g. help, skills, htb, contact)..." class="flex-1 bg-transparent text-cyan-300 outline-none">
-                    <button type="submit" class="px-3 py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[11px] hover:bg-cyan-500/40 transition-colors">
+                <form id="terminal-form" class="p-2.5 sm:p-3 bg-black/60 border-t border-white/10 flex items-center gap-2 font-mono text-xs overflow-x-hidden">
+                    <span class="text-rose-400 font-bold flex-shrink-0 text-[11px] sm:text-xs">
+                        <span class="hidden sm:inline">jafarov007@sec-lab:~$</span>
+                        <span class="sm:hidden">jafarov007:~$</span>
+                    </span>
+                    <input type="text" id="terminal-input" autocomplete="off" placeholder="type a command (e.g. help, skills, htb, contact)..." class="flex-1 min-w-[60px] bg-transparent text-cyan-300 outline-none text-[11px] sm:text-xs">
+                    <button type="submit" class="flex-shrink-0 px-2 py-1 sm:px-3 sm:py-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] sm:text-[11px] hover:bg-cyan-500/40 transition-colors whitespace-nowrap">
                         Exec ⏎
                     </button>
                 </form>

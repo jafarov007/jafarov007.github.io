@@ -458,18 +458,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile fallback: Fast, lightweight entrance animations with zero scroll lag
+    // Mobile fallback: Ultra-fast 0.11s entrance animations for instant loading
     mm.add("(max-width: 1023px)", () => {
         gsap.utils.toArray('#left-profile-sidebar, #about, #education, #expertise, #htb-badges, #research-projects-section, #contact').forEach((el) => {
             gsap.from(el, {
                 scrollTrigger: {
                     trigger: el,
-                    start: "top 99%",
+                    start: "top 100%",
                     once: true
                 },
-                y: 10,
+                y: 4,
                 opacity: 0,
-                duration: 0.25,
+                duration: 0.11,
                 ease: "power1.out",
                 clearProps: "all"
             });
